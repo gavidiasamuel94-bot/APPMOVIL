@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eat Anáhuac</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index-styles.css">
+</head>
+<body>
+    <header class="topbar">
+            <div class="profile">
+                <div class="avatar">
+                    <span>SG</span>
+                </div>
+                <div class="welcome">
+                    <span>Bienvenido de nuevo,</span>
+                    <strong>Samuel Gavidia</strong>
+                </div>
+            </div>
+            <button class="icon-button" aria-label="Notifications">
+                <img class="icon icon-md" src="icons/notificaciones.png" alt="Notifications">
+            </button>
+    </header>
+
+    <main class="content">
+        <section class="search-block fade-in">
+            <label class="search-box" aria-label="Buscar">
+                <span class="search-icon" aria-hidden="true">
+                    <img src="icons/buscador.png" alt="">
+                </span>
+                <input type="search" placeholder="Buscar comida o bebidas">
+            </label>
+            <div class="category-row" role="tablist" aria-label="Categorias">
+                <button class="chip active" role="tab" aria-selected="true">Todo</button>
+                <button class="chip" role="tab">
+                    <img class="chip-icon" src="icons/desayuno.png" alt="">
+                    Desayuno
+                </button>
+                <button class="chip" role="tab">
+                    <img class="chip-icon" src="icons/almuerzo.png" alt="">
+                    Almuerzo
+                </button>
+                <button class="chip" role="tab">
+                    <img class="chip-icon" src="icons/cena.png" alt="">
+                    Cena
+                </button>
+            </div>
+        </section>
+
+        <section class="section-head fade-in delay-2">
+            <h2>Destacados hoy</h2>
+            <button class="link-btn">Ver todo</button>
+        </section>
+
+        <section class="card-grid"></section>
+    </main>
+
+    <nav class="bottom-nav">
+        <button class="nav-item active" id="nav-home">
+            <img class="icon icon-sm" src="icons/home.png" alt="Home" data-icon="icons/home.png" data-icon-active="icons/homeHover.png">
+            Home
+        </button>
+        <button class="nav-item">
+            <img class="icon icon-sm" src="icons/orders.png" alt="Orders">
+            Orders
+        </button>
+        <button class="cart-btn" aria-label="Cart">
+            <img class="icon icon-lg" src="icons/carrito.png" alt="Cart">
+        </button>
+        <button class="nav-item">
+            <img class="icon icon-sm" src="icons/salvado.png" alt="Saved">
+            Saved
+        </button>
+        <button class="nav-item">
+            <img class="icon icon-sm" src="icons/perfil.png" alt="Profile">
+            Profile
+        </button>
+    </nav>
+    <script src="index-js.js"></script>
+</body>
+</html>
