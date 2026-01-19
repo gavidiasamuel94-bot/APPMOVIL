@@ -1,0 +1,417 @@
+/* Modificado por David Gavidia */
+.cart-page {
+    background: var(--cart-bg);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.cart-page::before {
+    display: none;
+}
+
+.cart-header {
+    display: grid;
+    grid-template-columns: var(--header-col) 1fr var(--header-col);
+    align-items: center;
+    padding: var(--header-pad);
+}
+
+.cart-header h1 {
+    text-align: center;
+    font-size: var(--title-size);
+    font-weight: 600;
+}
+
+.back-btn {
+    width: var(--back-size);
+    height: var(--back-size);
+    border-radius: var(--back-radius);
+    border: none;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    color: var(--ink);
+}
+
+.back-btn svg {
+    width: var(--back-icon);
+    height: var(--back-icon);
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.header-spacer {
+    width: var(--back-size);
+    height: var(--back-size);
+}
+
+.cart-content {
+    padding: var(--content-pad);
+    margin: 0 auto;
+    display: grid;
+    gap: var(--content-gap);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cart-section h2 {
+    font-size: var(--section-title);
+    margin-bottom: var(--section-margin);
+}
+
+.items-list {
+    display: grid;
+    gap: var(--items-gap);
+}
+
+.cart-page.is-empty .cart-section:not(.empty-only),
+.cart-page.is-empty .totals-card,
+.cart-page.is-empty .cart-footer {
+    display: none;
+}
+
+.cart-page.is-empty .empty-only h2 {
+    display: none;
+}
+
+.cart-page.is-empty .items-list {
+    min-height: var(--empty-items-min);
+}
+
+.empty-state {
+    text-align: center;
+    display: grid;
+    gap: var(--empty-gap);
+    justify-items: center;
+    padding: var(--empty-pad);
+    align-content: center;
+    min-height: var(--empty-min);
+}
+
+.empty-icon {
+    width: var(--empty-icon-size);
+    height: var(--empty-icon-size);
+    border-radius: var(--empty-icon-radius);
+    background: transparent;
+    display: grid;
+    place-items: center;
+    box-shadow: none;
+    color: var(--accent);
+}
+
+.empty-icon img {
+    width: var(--empty-img-size);
+    height: var(--empty-img-size);
+    object-fit: contain;
+    display: block;
+}
+
+.empty-state h3 {
+    font-size: var(--empty-title);
+}
+
+.empty-state p {
+    font-size: var(--empty-text);
+    color: #9a7b5d;
+    line-height: 1.6;
+}
+
+.empty-btn {
+    margin-top: var(--empty-btn-margin);
+    padding: var(--empty-btn-pad);
+    background: #FF7C00;
+    color: #ffffff;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: var(--empty-btn-size);
+    font-weight: 600;
+}
+
+.pickup-toggle {
+    background: #f1e8e0;
+    border-radius: var(--pickup-radius);
+    padding: var(--pickup-pad);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--pickup-gap);
+}
+
+.toggle-btn {
+    border: none;
+    background: transparent;
+    padding: var(--toggle-pad);
+    border-radius: var(--toggle-radius);
+    font-size: var(--toggle-size);
+    font-weight: 600;
+    color: #9a7b5d;
+}
+
+.toggle-btn.active {
+    background: #ffffff;
+    color: var(--accent);
+    box-shadow: var(--soft-shadow);
+}
+
+.totals-card {
+    background: #ffffff;
+    border-radius: var(--totals-radius);
+    padding: var(--totals-pad);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--soft-shadow);
+    display: grid;
+    gap: var(--totals-gap);
+}
+
+.totals-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--totals-size);
+    color: #9a7b5d;
+}
+
+.totals-row.total {
+    font-size: var(--totals-total);
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.totals-row.total span:last-child {
+    color: var(--accent);
+}
+
+.totals-divider {
+    height: 1px;
+    background: #f0e2d7;
+    margin: 6px 0;
+}
+
+.cart-footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: var(--footer-pad);
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.order-btn {
+    width: 100%;
+    border: none;
+    background: var(--accent);
+    color: #ffffff;
+    font-size: var(--order-font);
+    font-weight: 600;
+    padding: var(--order-pad);
+    border-radius: var(--order-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--order-gap);
+    box-shadow: 0 18px 30px rgba(225, 134, 45, 0.35);
+}
+
+.order-total {
+    opacity: 0.9;
+}
+
+.order-arrow {
+    font-size: var(--order-arrow);
+    margin-left: 4px;
+}
+
+@media (min-width: 1026px) {
+    .cart-page {
+        --cart-bg: #f7f3ef;
+        --card-border: #f1e3d6;
+        --soft-shadow: 0 18px 32px rgba(43, 43, 43, 0.08);
+        --header-pad: 30px 34px 16px;
+        --header-col: 64px;
+        --title-size: 28px;
+        --back-size: 52px;
+        --back-radius: 18px;
+        --back-icon: 24px;
+        --content-pad: 0 36px 150px;
+        --content-gap: 30px;
+        --section-title: 24px;
+        --section-margin: 16px;
+        --items-gap: 20px;
+        --empty-items-min: calc(100vh - 200px);
+        --empty-gap: 18px;
+        --empty-pad: 50px 22px 20px;
+        --empty-min: calc(100vh - 240px);
+        --empty-icon-size: 104px;
+        --empty-icon-radius: 34px;
+        --empty-img-size: 60px;
+        --empty-title: 24px;
+        --empty-text: 16px;
+        --empty-btn-margin: 12px;
+        --empty-btn-pad: 18px 30px;
+        --empty-btn-size: 16px;
+        --pickup-radius: 22px;
+        --pickup-pad: 10px;
+        --pickup-gap: 12px;
+        --toggle-pad: 16px 14px;
+        --toggle-radius: 18px;
+        --toggle-size: 16px;
+        --totals-radius: 26px;
+        --totals-pad: 24px 24px 22px;
+        --totals-gap: 14px;
+        --totals-size: 17px;
+        --totals-total: 24px;
+        --footer-pad: 22px 30px 30px;
+        --order-font: 19px;
+        --order-pad: 22px 24px;
+        --order-radius: 24px;
+        --order-gap: 14px;
+        --order-arrow: 24px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+    .cart-page {
+        --cart-bg: #f7f3ef;
+        --card-border: #f1e3d6;
+        --soft-shadow: 0 18px 32px rgba(43, 43, 43, 0.08);
+        --header-pad: 26px 26px 12px;
+        --header-col: 56px;
+        --title-size: 26px;
+        --back-size: 48px;
+        --back-radius: 16px;
+        --back-icon: 22px;
+        --content-pad: 0 30px 140px;
+        --content-gap: 28px;
+        --section-title: 22px;
+        --section-margin: 14px;
+        --items-gap: 18px;
+        --empty-items-min: calc(100vh - 190px);
+        --empty-gap: 16px;
+        --empty-pad: 44px 18px 18px;
+        --empty-min: calc(100vh - 230px);
+        --empty-icon-size: 96px;
+        --empty-icon-radius: 32px;
+        --empty-img-size: 54px;
+        --empty-title: 22px;
+        --empty-text: 15px;
+        --empty-btn-margin: 10px;
+        --empty-btn-pad: 16px 26px;
+        --empty-btn-size: 15px;
+        --pickup-radius: 20px;
+        --pickup-pad: 8px;
+        --pickup-gap: 10px;
+        --toggle-pad: 15px 12px;
+        --toggle-radius: 18px;
+        --toggle-size: 15px;
+        --totals-radius: 24px;
+        --totals-pad: 22px 22px 20px;
+        --totals-gap: 12px;
+        --totals-size: 16px;
+        --totals-total: 22px;
+        --footer-pad: 20px 26px 28px;
+        --order-font: 18px;
+        --order-pad: 20px 22px;
+        --order-radius: 22px;
+        --order-gap: 12px;
+        --order-arrow: 22px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .cart-page {
+        --cart-bg: #f7f3ef;
+        --card-border: #f1e3d6;
+        --soft-shadow: 0 18px 32px rgba(43, 43, 43, 0.08);
+        --header-pad: 22px 20px 10px;
+        --header-col: 46px;
+        --title-size: 22px;
+        --back-size: 40px;
+        --back-radius: 14px;
+        --back-icon: 20px;
+        --content-pad: 0 22px 126px;
+        --content-gap: 24px;
+        --section-title: 20px;
+        --section-margin: 12px;
+        --items-gap: 16px;
+        --empty-items-min: calc(100vh - 170px);
+        --empty-gap: 14px;
+        --empty-pad: 36px 14px 16px;
+        --empty-min: calc(100vh - 210px);
+        --empty-icon-size: 86px;
+        --empty-icon-radius: 28px;
+        --empty-img-size: 48px;
+        --empty-title: 20px;
+        --empty-text: 14px;
+        --empty-btn-margin: 8px;
+        --empty-btn-pad: 14px 22px;
+        --empty-btn-size: 14px;
+        --pickup-radius: 18px;
+        --pickup-pad: 7px;
+        --pickup-gap: 8px;
+        --toggle-pad: 13px 10px;
+        --toggle-radius: 16px;
+        --toggle-size: 14px;
+        --totals-radius: 22px;
+        --totals-pad: 20px 20px 18px;
+        --totals-gap: 12px;
+        --totals-size: 15px;
+        --totals-total: 20px;
+        --footer-pad: 18px 20px 24px;
+        --order-font: 17px;
+        --order-pad: 18px 20px;
+        --order-radius: 20px;
+        --order-gap: 12px;
+        --order-arrow: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-page {
+        --cart-bg: #f7f3ef;
+        --card-border: #f1e3d6;
+        --soft-shadow: 0 18px 32px rgba(43, 43, 43, 0.08);
+        --header-pad: 18px 16px 6px;
+        --header-col: 40px;
+        --title-size: 19px;
+        --back-size: 34px;
+        --back-radius: 12px;
+        --back-icon: 18px;
+        --content-pad: 0 16px 116px;
+        --content-gap: 20px;
+        --section-title: 17px;
+        --section-margin: 10px;
+        --items-gap: 14px;
+        --empty-items-min: calc(100vh - 140px);
+        --empty-gap: 12px;
+        --empty-pad: 28px 10px 10px;
+        --empty-min: calc(100vh - 180px);
+        --empty-icon-size: 72px;
+        --empty-icon-radius: 24px;
+        --empty-img-size: 40px;
+        --empty-title: 18px;
+        --empty-text: 13px;
+        --empty-btn-margin: 6px;
+        --empty-btn-pad: 12px 18px;
+        --empty-btn-size: 13px;
+        --pickup-radius: 16px;
+        --pickup-pad: 6px;
+        --pickup-gap: 6px;
+        --toggle-pad: 11px 8px;
+        --toggle-radius: 14px;
+        --toggle-size: 12px;
+        --totals-radius: 18px;
+        --totals-pad: 16px 16px 14px;
+        --totals-gap: 10px;
+        --totals-size: 13px;
+        --totals-total: 17px;
+        --footer-pad: 14px 16px 20px;
+        --order-font: 15px;
+        --order-pad: 14px 16px;
+        --order-radius: 18px;
+        --order-gap: 10px;
+        --order-arrow: 18px;
+    }
+}

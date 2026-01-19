@@ -1,3 +1,4 @@
+// 19/01/2026 David Gavidia
 const navItems = document.querySelectorAll(".bottom-nav .nav-item");
 
 const setActiveNav = (activeItem) => {
