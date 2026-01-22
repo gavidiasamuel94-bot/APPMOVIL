@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos de Pago</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index-styles.css">
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body class="payment-page">
+    <header class="payment-header">
+        <a class="back-btn" href="profile.html" aria-label="Back">
+            <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                <path d="M15 6l-6 6 6 6"></path>
+            </svg>
+        </a>
+        <h1>Metodos de Pago</h1>
+        <button class="info-btn" aria-label="Info">
+            <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 10v6"></path>
+                <circle cx="12" cy="7" r="1"></circle>
+            </svg>
+        </button>
+    </header>
+
+    <main class="payment-content">
+        <section class="balance-card">
+            <div class="balance-icon">
+                <img src="icons/saldo.png" alt="">
+            </div>
+            <div class="balance-info">
+                <span>Saldo Universitario</span>
+                <strong></strong>
+            </div>
+            <button class="balance-btn" type="button">Recargar</button>
+        </section>
+
+        <section class="payment-section">
+            <button class="add-btn inline" type="button">
+                <img src="icons/agregar-metodo.png" alt="">
+                Agregar Nuevo Metodo
+            </button>
+        </section>
+
+        <section class="payment-section">
+            <h2>Otros Metodos</h2>
+            <div class="payment-card">
+                <div class="method-icon dark">
+                    <img src="icons/applepay.png" alt="">
+                </div>
+                <div class="method-info">
+                    <strong>Apple Pay</strong>
+                    <span>Configurado</span>
+                </div>
+                <span class="chevron">&gt;</span>
+            </div>
+            <div class="payment-card">
+                <div class="method-icon green">
+                    <img src="icons/recarga.png" alt="">
+                </div>
+                <div class="method-info">
+                    <strong>Puntos de Recarga</strong>
+                    <span>Efectivo en Campus</span>
+                </div>
+                <span class="chevron">&gt;</span>
+            </div>
+        </section>
+    </main>
+
+    <script src="payment.js"></script>
+</body>
+</html>

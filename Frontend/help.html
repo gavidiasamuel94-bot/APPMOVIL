@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda y Soporte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index-styles.css">
+    <link rel="stylesheet" href="help.css">
+</head>
+<body class="help-page">
+    <header class="help-header">
+        <a class="back-btn" href="profile.html" aria-label="Back">
+            <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                <path d="M15 6l-6 6 6 6"></path>
+            </svg>
+        </a>
+        <h1>Ayuda y Soporte</h1>
+        <span></span>
+    </header>
+
+    <main class="help-content">
+        <section class="help-hero">
+            <h2>Como podemos ayudarte?</h2>
+        </section>
+
+        <section class="help-cards">
+            <button class="help-card wide" type="button">
+                <div class="card-icon">
+                    <img src="icons/alerta.png" alt="">
+                </div>
+                <div class="card-text">
+                    <strong>Reportar un problema con mi pedido</strong>
+                </div>
+                <div class="card-ghost">
+                    <img src="icons/bolsa.png" alt="">
+                </div>
+            </button>
+            <button class="help-card green" type="button">
+                <div class="card-icon">
+                    <img src="icons/pago.png" alt="">
+                </div>
+                <div class="card-text">
+                    <strong>Dudas con el pago</strong>
+                </div>
+                <div class="card-ghost">
+                    <img src="icons/billete.png" alt="">
+                </div>
+            </button>
+            <button class="help-card purple" type="button">
+                <div class="card-icon">
+                    <img src="icons/megafono.png" alt="">
+                </div>
+                <div class="card-text">
+                    <strong>Sugerencias para la aplicacion</strong>
+                </div>
+                <div class="card-ghost">
+                    <img src="icons/chat.png" alt="">
+                </div>
+            </button>
+        </section>
+
+        <section class="faq-head">
+            <h3>Preguntas frecuentes</h3>
+            <button class="link-btn">Ver todas</button>
+        </section>
+
+        <section class="faq-list">
+            <div class="faq-entry">
+                <button class="faq-item" type="button">
+                    <span class="faq-icon">
+                        <img src="icons/pregunta.png" alt="">
+                    </span>
+                    <span>Donde esta mi pedido?</span>
+                    <span class="chevron">&gt;</span>
+                </button>
+                <div class="faq-answer">
+                    Una vez que tu pedido este listo, recibiras una notificacion en la app. Dirigete al punto de entrega seleccionado y muestra tu codigo QR en la seccion "Mis Pedidos".
+                </div>
+            </div>
+            <div class="faq-entry">
+                <button class="faq-item" type="button">
+                    <span class="faq-icon">
+                        <img src="icons/reembolso.png" alt="">
+                    </span>
+                    <span>Como pido un reembolso?</span>
+                    <span class="chevron">&gt;</span>
+                </button>
+                <div class="faq-answer">
+                    Ve a "Mis Pedidos", selecciona la orden y toca "Solicitar reembolso". Revisaremos tu caso y te notificaremos el estado dentro de 24 a 48 horas.
+                </div>
+            </div>
+            <div class="faq-entry">
+                <button class="faq-item" type="button">
+                    <span class="faq-icon">
+                        <img src="icons/metodo-pago2.png" alt="">
+                    </span>
+                    <span>Que metodos de pago aceptan?</span>
+                    <span class="chevron">&gt;</span>
+                </button>
+                <div class="faq-answer">
+                    Aceptamos saldo universitario, tarjetas guardadas y puntos de recarga en campus. Puedes administrar todo desde "Metodos de Pago".
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="help-footer">
+        <button class="advisor-btn" type="button">
+            <img src="icons/asesor.png" alt="">
+            Contactar a un asesor
+        </button>
+    </footer>
+
+    <script src="help.js"></script>
+</body>
+</html>

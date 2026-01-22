@@ -147,6 +147,7 @@ input {
     display: grid;
     gap: 6px;
     place-items: center;
+    text-decoration: none;
 }
 
 .nav-item.active {

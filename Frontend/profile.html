@@ -1,0 +1,119 @@
+<!-- Elaboro David Gavidia, implementación de módulo de Perfil -->
+<!-- Modifico David Gavidia -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index-styles.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body class="profile-page">
+    <header class="profile-hero">
+        <div class="hero-actions">
+            <button class="hero-btn" aria-label="Tema">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                    <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3a8 8 0 1 0 11.5 11.5z"></path>
+                </svg>
+            </button>
+            <button class="hero-btn" aria-label="Ajustes">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a7.8 7.8 0 0 0 .1-6l2-1.1-2-3.5-2.2.8a7.8 7.8 0 0 0-5.2-3l-.4-2.3h-4l-.4 2.3a7.8 7.8 0 0 0-5.2 3L0 4.4 2 7.9 4 9a7.8 7.8 0 0 0 .1 6l-2 1.1 2 3.5 2.2-.8a7.8 7.8 0 0 0 5.2 3l.4 2.3h4l.4-2.3a7.8 7.8 0 0 0 5.2-3l2.2.8 2-3.5-2-1.1z"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="avatar-xl">SG</div>
+        <h1>Samuel Gavidia</h1>
+        <p>samuel.gavidia@university.edu</p>
+    </header>
+
+    <main class="profile-content">
+        <section class="card-list">
+            <button class="list-item" type="button">
+                <span class="item-icon warm">
+                    <img src="icons/mis-pedidos.png" alt="">
+                </span>
+                <div class="item-text">
+                    <strong>Mis Pedidos</strong>
+                </div>
+                <span class="item-arrow">›</span>
+            </button>
+            <button class="list-item" type="button" data-href="payment.html">
+                <span class="item-icon blue">
+                    <img src="icons/metodos-pago.png" alt="">
+                </span>
+                <div class="item-text">
+                    <strong>Metodos de Pago</strong>
+                </div>
+                <span class="item-arrow">›</span>
+            </button>
+            <button class="list-item" type="button" data-href="edit.html">
+                <span class="item-icon green">
+                    <img src="icons/editar-perfil.png" alt="">
+                </span>
+                <div class="item-text">
+                    <strong>Editar Perfil</strong>
+                </div>
+                <span class="item-arrow">›</span>
+            </button>
+        </section>
+
+        <section class="card-list">
+            <button class="list-item" type="button">
+                <span class="item-icon purple">
+                    <img src="icons/notificacionesp.png" alt="">
+                </span>
+                <div class="item-text">
+                    <strong>Notificaciones</strong>
+                </div>
+                <span class="item-arrow">›</span>
+            </button>
+            <button class="list-item" type="button" data-href="help.html">
+                <span class="item-icon lilac">
+                    <img src="icons/ayuda-soporte.png" alt="">
+                </span>
+                <div class="item-text">
+                    <strong>Ayuda y Soporte</strong>
+                </div>
+                <span class="item-arrow">›</span>
+            </button>
+        </section>
+
+        <button class="logout-btn" type="button">
+            <span class="logout-icon">
+                <img src="icons/cerrar-sesion.png" alt="">
+            </span>
+            Cerrar Sesion
+        </button>
+    </main>
+
+    <nav class="bottom-nav">
+        <a class="nav-item" href="index.html">
+            <img class="icon icon-sm" src="icons/home.png" alt="Home" data-icon="icons/home.png" data-icon-active="icons/homeHover.png">
+            Home
+        </a>
+        <a class="nav-item" href="index.html">
+            <img class="icon icon-sm" src="icons/orders.png" alt="Orders" data-icon="icons/orders.png" data-icon-active="icons/ordersHover.png">
+            Orders
+        </a>
+        <a class="cart-btn" href="cart.html" aria-label="Cart">
+            <img class="icon icon-lg" src="icons/carrito.png" alt="Cart">
+        </a>
+        <a class="nav-item" href="index.html">
+            <img class="icon icon-sm" src="icons/salvado.png" alt="Saved" data-icon="icons/salvado.png" data-icon-active="icons/salvadohover.png">
+            Saved
+        </a>
+        <a class="nav-item active" href="profile.html">
+            <img class="icon icon-sm" src="icons/perfil.png" alt="Profile" data-icon="icons/perfil.png" data-icon-active="icons/perfilhover.png">
+            Profile
+        </a>
+    </nav>
+
+    <script src="profile.js"></script>
+</body>
+</html>
